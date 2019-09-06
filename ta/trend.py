@@ -167,11 +167,11 @@ def adx(high, low, close, n=14, fillna=False):
 
     dip = np.zeros(len(trs))
     for i in range(len(trs)):
-        dip[i] = 100 * (dip_mio[i]/(trs[i]+1))
+        dip[i] = 100 * (dip_mio[i]/(trs[i]))
 
     din = np.zeros(len(trs))
     for i in range(len(trs)):
-        din[i] = 100 * (din_mio[i]/(trs[i]+1))
+        din[i] = 100 * (din_mio[i]/(trs[i]))
 
     dx = 100 * np.abs((dip - din) / (dip + din))
 
